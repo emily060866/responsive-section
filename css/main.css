@@ -10,7 +10,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font: normal 100%/1.3 'Noto Sans', sans-serif;
 }
 
 *, *::before, *::after {
@@ -22,20 +21,28 @@ p {
   margin: 0 0 1.3rem;
 }
 
+.img-flex {
+  width: 100%;
+  display: block;
+}
+
 body {
   margin: 0;
 }
 
 img {
   width: 100%;
+  display: block;
 }
 
 .wrapper {
+  margin: 0 auto;
+  max-width: 45em;
   display: flex;
   flex-wrap: wrap;
 }
 
-.banner {
+section {
   background-color: #e5c30a;
   padding: 1.3rem;
 }
@@ -55,15 +62,88 @@ section h2 {
   font-size: 1.5rem;
 }
 
-.section-icon, .section-letter {
+.section-icon {
+  width: 50%;
+}
+
+.section-letter {
   width: 50%;
 }
 
 @media only screen and (min-width: 25em) {
 
-  .section-icon, .section-letter {
+  .section-icon {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .section-letter {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  h1,
+  p {
+    margin: 0 0 1.4rem;
+  }
+
+  .wrapper {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  section {
+    justify-content: space-around;
+  }
+
+  .section-icon {
+    order: 3;
+    margin-left: 1.3rem;
+  }
+
+  .img-flex {
+    max-width: 60%;
+  }
+
+  .section-icon, .section-letter {
+    padding: 0;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  h1,
+  p {
+    margin: 0 0 1.5rem;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+  .wrapper {
+    max-width: 45em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
